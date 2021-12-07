@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(217, 217, 217);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+body{
+    height: 100%;
+    background-color: rgb(0,0, 0);
+    font-size: 15px;
+}
+.container{
+    display: flex;
+    min-width: 100%;
+}
+header{
+    min-width: 25%;
+    min-height: 100vh;
+    padding-left: 7%;
+    
+}
+main{
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 100%;
+    min-width: 75%;
+    padding-right: 6%;
+}
+.content{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 65%;
+    height: auto;
+    border-right: #15181c solid 1.5px;
+    border-left: #15181c solid 1.5px;
+}
+
+/* left side starts here  */
+.navigator{
+    height: 100%;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px;
+    position: fixed;
+
+}
+.nav-options{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    font-size: 22px;
+    font-weight: lighter;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+}
+.nav-option{
+    margin-bottom: 12px;
+    height: 9%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 12px;
+}
+.nav-option:hover{
+    background-color: #161616;
+    cursor: pointer;
+    transition-delay: 0.1s;
+}
+.nav-icon{
+    margin-right: 16px;
+}
+.nav-option.logo{
+    font-size: 30px;
+    width: fit-content;
+}
+.nav-option.logo:hover{
+    background-color: #031018;
+}
+.nav-option.home{
+    font-weight:700;
+}
+.tweet{
+    font-size: 20px;
+    letter-spacing: -1px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background-color: rgb(29, 155, 240);
+    transition: 5ms;
+    font-weight: bold;
+}
+.tweet:hover,.submit:hover{
+    background-color: rgba(29, 156, 240, 0.87);
+    transition-delay: 0.15s;
+    cursor: pointer;
+}
+.user{
+    height: 9%;
+    width: 100%;
+    margin-top: auto;
+    border-radius: 9999px;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+.user:hover{
+    background-color: #161616;
+    cursor: pointer;
+}
+.avatar{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 9999px;
+    background-image: url(https://avatars.githubusercontent.com/u/79789579?v=4);
+    background-size: cover;
+    margin-right: 16px;
+}
+.info{
+    justify-content: space-around;
+}
+.account{
+    margin-left: auto;
+    font-weight: lighter;
+}
+.name{
+    font-weight: 700;
+}
+.nick{
+    color: rgb(110, 118, 125);
+}
+
+/* left side finishes here */
+
+/* flow starts here */
+.homepage{
+    background-color: inherit;
+    height: 52px;
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: #15181c solid 1.5px;
+    position: sticky;
+    top: 0;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+.hp-bg{
+    height: 52px;
+    width: 44.5%;
+    background-color:rgb(0,0, 0);
+    position: fixed;
+    
+}
+.homepage span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    font-weight: normal;
+    border-radius: 9999px;
+    width: min-content;
+    padding: 6px;
+    cursor: pointer;
+}
+.homepage span:hover{
+    background-color: #161616;
+}
+.tweet-section{
+    height: 20%;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-bottom: #15181c solid 2px;
+    display: flex;
+}
+.user-img{
+    height: 100%;
+    width: fit-content;
+    padding: 16px;
+}
+.user-img div{
+    height: 48px;
+    width: 48px;
+    border-radius: 9999px;
+    background-image: url(https://avatars.githubusercontent.com/u/79789579?v=4);
+    background-size: cover;
+}
+.tweet-content{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.tweet-content input{
+    padding: 4px;
+    border-style: hidden;
+    color:  rgb(110, 118, 125);
+    height: 40px;
+    font-size: 20px;
+    background-color: inherit;
+}
+.tweet-content input:focus{
+    outline: none;
+    color: rgb(217, 217, 217);
+}
+.strict{
+    width: fit-content;
+    color: rgb(29, 155, 240);
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 4px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.strict:hover{
+    background-color: #031018;
+}
+.strict span{
+    margin-right: 4px;
+}
+.post{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    margin-top: auto;
+    border-top: #15181c solid 1.5px;
+}
+.post-options span{
+    padding: 8px;
+    height: 25px;
+    width: 25px;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+.post-options span:hover{
+background-color: #031018;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 700;
+    width: fit-content;
+    margin-left: auto;
+    border-radius: 9999px;
+    background-color: rgb(29, 155, 240);
+}
+.timeline{
+    display: flex;
+    flex-direction: column;
+}
+.tweets{
+    display: flex;
+    padding: 16px;
+    border-bottom: #15181c solid 1.5px;
+    cursor: pointer;
+}
+.tweets:hover{
+    background-color: #080808;
+}
+.tweet-owner{
+    height: 48px;
+    width: 48px;
+    border-radius: 9999px;
+    background-image: url(https://avatars.githubusercontent.com/u/79789579?v=4);
+    background-size: cover;
+    margin-right: 16px;
+}
+.twit{
+    width: 100%;
+}
+.twit div{
+    display: flex;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+.reactions{
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.reactions span i{
+    font-size: 15px;
+    color: rgb(110, 118, 125);
+    padding: 4px;
+    border-radius: 16px;
+}
+.reactions span i:hover{
+    background-color: rgba(29, 156, 240, 0.15);
+}
+
+/* flow ends here */
+
+
+/* right side starts here */
+.right-bar{
+    padding-right: 32px;
+    padding-left: 32px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-style: none;
+    background-color: rgb(32, 35, 39);
+    height: 48x;
+    border-radius: 9999px;
+    font-size: 20px;
+    cursor: text;
+    position: sticky;
+    top: 4px;
+    z-index: 1;
+}
+.s-bg{
+    height: 52px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    
+}
+.search:hover{
+    background-color: black;
+    border: 1px solid rgb(29, 155, 240);
+}
+#srch:hover,:active{
+    color: rgb(29, 155, 240);
+}
+.search span i{
+    margin-right: 16px;
+    color: rgb(110, 118, 125);
+    font-weight: 600;
+}
+.search input{
+    background-color: inherit;
+    border-style: none;
+    width: 100%;
+}
+.search input:focus{
+    outline: none;
+}
+.topic{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    background-color: #15181c;
+    min-height: 0;
+    border-radius: 16px;
+    justify-content: space-between;
+}
+.title{
+    padding: 16px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: fit-content;
+}
+.title span{
+    margin-left: auto;
+}
+.trend-topic{
+    padding-left: 16px;
+    width: 100%;
+    height: 13%;
+    padding-top: 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.trend-topic:hover{
+    background-color: #1c1f23;
+} 
+.trend-topic div div{
+    font-weight: 700;
+}
+.trend-topic div span{
+    font-size: 12px;
+    color: #6e767d;
+}
+#dot{
+    margin-left: auto;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-radius: 16px;
+}
+#dot:hover{
+    background-color: rgba(29, 156, 240, 0.10);
+}
+.show-more{
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    height: 100%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    color: rgb(29, 155, 240);
+
+}
+.show-more:hover{
+    background-color: #1c1f23;
+}
+.suggestions{
+    margin-top: 16px;
+    background-color: #15181c;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+.follow-suggest{
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.follow-suggest:hover{
+    background-color: #1c1f23;
+}
+.sug-img{
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    background-image: url(https://avatars.githubusercontent.com/u/79789579?v=4);
+    background-size: cover;
+    margin-right: 16px;
+}
+.sug-follow{
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    background-color: rgb(217, 217, 217);
+    border-radius: 9999px;
+    color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.i{
+    font-size: 10px;
+    display: flex;
+    width: 100%;
+    padding-left: 16px;
+    align-items: center;
+    margin-bottom: 32px;
+    color: #6e767d;
+}
